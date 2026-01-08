@@ -3,7 +3,7 @@ import Music from "./components/Music.jsx";
 import "./App.css";
 
 function App() {
-  const [bgImage, setBgImage] = useState("2");
+  const [bgImage, setBgImage] = useState("1");
   useEffect(() => {
     if (window.YT) return;
 
@@ -13,19 +13,23 @@ function App() {
   }, []);
 
   const handleBackgroundChange = () => {
-    const newBg = Math.floor(Math.random() * 15 + 1);
+    const newBg = bgImage + 1 > 15 ? 1 : bgImage + 1;
     setBgImage(newBg === bgImage ? Math.floor(Math.random() * 15 + 1) : newBg);
   };
 
   return (
-    <div
-      className="app-container"
-      style={{ backgroundImage: `url(./pixled/bg${bgImage}.png)` }}
-    >
-      <Music videoId="jfKfPfyJRdk" />
-      <button className="bg-button" onClick={handleBackgroundChange}>
-        Change Background
-      </button>
+    <div className="crt">
+      <div className="crt-content">
+        <div
+          className="app-container"
+          style={{ backgroundImage: `url(./pixled/bg${bgImage}.png)` }}
+        >
+          <Music videoId="jfKfPfyJRdk" />
+          <button className="bg-button" onClick={handleBackgroundChange}>
+            Change Background
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

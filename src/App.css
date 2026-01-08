@@ -10,4 +10,28 @@
 }
 .bg-button {
   margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #be22eeb7;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: background-color 0.3s ease;
+}
+.bg-button:hover {
+  background-color: #be22ee;
+}
+
+.crt {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
