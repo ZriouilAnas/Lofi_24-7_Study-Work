@@ -1,62 +1,85 @@
 /* Music.css */
+/* Music.css */
 .player {
   max-width: 800px;
   margin-left: 1rem;
+  margin-bottom: 2rem;
   justify-self: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
 }
 
+/* Ensure station info text truncates if too long */
 .station-info {
-  text-align: center;
-  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .station-info a {
-  font-size: 1.5rem;
-  color: #000000;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 12px;
+  line-height: 1.5;
+  /* Improve readability for pixel fonts */
+  color: #c9ffdb;
   text-decoration: none;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.309);
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  background: #2a102b;
+  padding: 1rem;
+  border-radius: 0;
+  /* No rounded corners */
+  transition: transform 0.1s ease;
   display: inline-block;
-  outline: olive solid 1px;
+
+  /* Pixel Border */
+  box-shadow:
+    inset 2px 2px 0px 0px #ffffff20,
+    inset -2px -2px 0px 0px #00000040,
+    4px 4px 0px 0px #000000;
+
+  border: 4px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .station-info a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #3a163c;
   transform: translateY(-2px);
 }
 
 .controls {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
+  flex-wrap: nowrap;
 }
 
 .control-btn {
-  width: 2rem;
-  height: 2rem;
-  border: rgb(209, 28, 181) solid 1px;
+  width: 48px;
+  height: 48px;
+  border: 4px solid #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: #be22ee40;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+  background-color: #2a102b;
+  box-shadow: 4px 4px 0px #000000;
+  border-radius: 0;
 }
 
 .control-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+  background-color: #461e47;
 }
 
 .control-btn:active {
-  transform: translateY(-1px) scale(0.98);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
 }
 
 .play-btn svg {
@@ -90,16 +113,16 @@
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 1rem;
-  background: rgba(127, 7, 87, 0.508);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #2a102b;
+  border: 4px solid #fff;
+  border-radius: 0;
   min-width: 250px;
-  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px #000000;
 }
 
 .volume-control:hover {
-  background: rgba(127, 7, 87, 0.917);
-  border-color: rgba(127, 7, 87, 0.731);
+  background: #2a102b;
+  border-color: #fff;
 }
 
 .volume-icon {
@@ -129,39 +152,38 @@
 .slider-progress {
   position: absolute;
   height: 100%;
-  background: linear-gradient(90deg, #4ade80, #22d3ee);
-  border-radius: 2px;
-  transition: width 0.1s ease;
+  background: #4ade80;
+  border-radius: 0;
+  /* Square progress */
 }
 
+/* Hide soft glow */
 .progress-glow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 10px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
-  border-radius: 0 2px 2px 0;
+  display: none;
 }
 
 .slider-thumb {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(74, 222, 128, 0.2);
-  transition: all 0.2s ease;
+  width: 12px;
+  height: 24px;
+  /* Rectangular thumb */
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  transition: none;
+  /* Instant movement */
   pointer-events: none;
   z-index: 2;
 }
 
 .slider-thumb.active,
 .slider-wrapper:hover .slider-thumb {
-  transform: translate(-50%, -50%) scale(1.2);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(74, 222, 128, 0.3);
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+  background: #fff;
 }
 
 .volume-slider-input {
@@ -175,46 +197,44 @@
 
 .volume-display {
   position: absolute;
-  top: -35px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border: 2px solid #fff;
+  border-radius: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 10px;
   white-space: nowrap;
   pointer-events: none;
   z-index: 4;
-  animation: fadeIn 0.2s ease;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: none;
 }
 
 .volume-display::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid rgba(0, 0, 0, 0.9);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
+  /* Pixel triangle isn't perfect in CSS but this works */
 }
 
 .volume-percentage {
-  min-width: 50px;
+  min-width: 60px;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 10px;
+  font-family: "Press Start 2P", system-ui;
   color: #9bffc0;
-  background: rgba(74, 222, 128, 0.1);
-
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  background: transparent;
+  border-radius: 0;
 }
 
 @keyframes fadeIn {
@@ -222,6 +242,7 @@
     opacity: 0;
     transform: translateX(-50%) translateY(5px);
   }
+
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
