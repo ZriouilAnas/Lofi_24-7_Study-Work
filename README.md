@@ -12,7 +12,6 @@ This project is created **strictly for learning and experimentation**:
 ### ❌ No Commercial Use
 - No monetization
 - No redistribution
-- No production deployment
 - No App Store usage
 
 ---
