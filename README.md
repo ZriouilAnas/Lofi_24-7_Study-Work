@@ -1,16 +1,44 @@
-# React + Vite
+⚠️ **This project is for educational purposes only.**  
+It is **not intended for production, commercial use, or distribution**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ⚠️ Important Limitations & Disclaimer
 
-Currently, two official plugins are available:
+### Educational Use Only
+This project is created **strictly for learning and experimentation**:
+- Understanding the YouTube IFrame API
+- Learning how to control external media in React
+- Practicing custom player logic
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ❌ No Commercial Use
+- No monetization
+- No redistribution
+- No production deployment
+- No App Store usage
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- YouTube IFrame Player API
+- HTML / CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📚 Learning Goals
+
+- Understand how the YouTube Player API works
+- Learn how to integrate third-party APIs in React
+- Handle media playback rules in modern browsers
+
+---
+
+## 📌 Final Note
+
+This project exists purely as a **technical learning exercise**.  
+
+
+---
+
+Happy learning 🎓
