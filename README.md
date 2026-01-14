@@ -5,9 +5,10 @@
 ## Change stations and background.
 
 
-⚠️  It is **not intended for production, commercial use, or distribution**.
 
-## ⚠️ Important Limitations & Disclaimer
+  It is **not intended for production, commercial use, or distribution**.
+
+##  Important Limitations & Disclaimer
 
 ### Educational Use Only
 This project is created **strictly for learning and experimentation**:
@@ -18,8 +19,7 @@ This project is created **strictly for learning and experimentation**:
 ### ❌ No Commercial Use
 - No monetization
 - No redistribution
-- No App Store usage
-
+  
 ---
 
 ## 🛠 Technologies Used
