@@ -1,5 +1,11 @@
-⚠️ **This project is for educational purposes only.**  
-It is **not intended for production, commercial use, or distribution**.
+# Lofi Web site that plays 24/7 music to study or work while listion to music.
+
+## Listen continuously without needing to pick tracks yourself.
+## Keep one tab open with the stream while you work or study.
+## Change stations and background.
+
+
+⚠️  It is **not intended for production, commercial use, or distribution**.
 
 ## ⚠️ Important Limitations & Disclaimer
 
